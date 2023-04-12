@@ -14,8 +14,8 @@ public class Sample {
 		sample.printNot3Codes2();
 		sample.printNot23Codes1();
 		sample.printNot23Codes2();
-		System.out.println(sample.code2num(38));
-		System.out.println(sample.code2suit(52));
+		System.out.println(sample.code2num(26));
+		System.out.println(sample.code2suit(26));
 	}
 
 	void hello() {
@@ -104,6 +104,9 @@ public class Sample {
 	
 	int code2num(int code) {
 		int ancer = code%13;
+		if(ancer==0) {
+			ancer=13;
+		}
 		return ancer;
 	}
 	
