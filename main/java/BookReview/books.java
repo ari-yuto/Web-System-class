@@ -5,11 +5,11 @@ import java.sql.Date;
 public class books {
 	/** ID */
 	private int id;
-	/** 名前 */
+	/** タイトル */
 	private String title;
-	/** パスワード */
+	/** 著者 */
 	private String author;
-	/** 自己紹介 */
+	/** 出版日 */
 	private Date created_at;
 	
 	/** コンストラクタ */
