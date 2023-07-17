@@ -28,6 +28,7 @@ public class BookDetailServlet extends HttpServlet {
 		if( name != null) {
 			int User_id = Integer.parseInt(user_id);
 			DetailList(request, response, User_id);
+			SearchUser(request, response, User_id);
 			RequestDispatcher dispatcher = request.getRequestDispatcher("/UserDetail.jsp");
 			dispatcher.forward(request, response);
 		}
@@ -49,6 +50,13 @@ public class BookDetailServlet extends HttpServlet {
 			detailDAO DetailDAO = new detailDAO();
 			List<detailuser> list = DetailDAO.FindDetailUser(User_id);
 			request.setAttribute("listdetailuser", list);
+		}
+		
+		void SearchUser(HttpServletRequest request, HttpServletResponse response, int User_id) throws 
+		ServletException, IOException {
+			userDAO UserDAO = new userDAO();
+			List<users> list = UserDAO.searchUser(User_id);
+			request.setAttribute("listuser", list);
 		}
 
 }

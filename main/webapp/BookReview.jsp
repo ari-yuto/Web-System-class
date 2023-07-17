@@ -14,8 +14,8 @@ int book_id = (int)session.getAttribute("book_id");
 	<h1>本のレビュー入力</h1>
 	<form action="/s2132008/BookReviewServlet" method="POST">
 		<p><%=user_name%>:ログイン中</p>
-		レビュータイトル<input type="text" name="newtitle" id="newtitle"/><br>
-		レビュー内容<textarea type="text" name="newreview" id="newreview"/></textarea><br>
+		レビュータイトル<input type="text" name="newtitle" id="newtitle" required><br>
+		レビュー内容<textarea type="text" name="newreview" id="newreview" required></textarea><br>
 		<input type="submit" value="登録" id = "submit"/>
 		<a href="BookListServlet?ID=<%= book_id %>">一つ前に戻る</a>
 	</form>

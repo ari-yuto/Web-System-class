@@ -73,38 +73,6 @@ public class userDAO {
 		}
 		return result;
 	}
-
-	public static  List<users> findall() {
-		List<users> list = new ArrayList<>();
-		String url = "jdbc:h2:tcp://localhost/./s2132008";
-		Connection conn = null;
-		try {
-			conn = DriverManager.getConnection(url, "user", "pass");
-			String sql = "select * from users;";
-			PreparedStatement pre = conn.prepareStatement(sql);
-			ResultSet rs = pre.executeQuery();
-			while (rs.next()) {
-				int ID = rs.getInt("ID");
-				String name = rs.getString("name");
-				String passwd = rs.getString("passwd");
-				String biography = rs.getString("biography");
-				users p = new users(ID,name, passwd, biography);
-				list.add(p);
-			}
-		}catch (SQLException e) {
-			e.printStackTrace();
-		} finally {
-			if (conn != null) {
-				try {
-					conn.close();
-				} catch (SQLException e) {
-					e.printStackTrace();
-					return null;
-				}
-			}
-		}
-		return list;
-	}
 	
 	public List<users> searchUser(int user_id){
 		List<users> list = new ArrayList<>();

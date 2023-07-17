@@ -24,7 +24,7 @@ String user_name = (String) session.getAttribute("name");
 	</p>
 	<hr>
 	<form action="/s2132008/BookListServlet" method="POST">
-		<input type="submit" name="favorite" value="登録" ID="favorite">️
+		お気に入り：<input type="submit" name="favorite" value="登録" ID="favorite">️
 		<input type="submit" name="favorite" value="解除" ID="favorite">
 	</form>
 	<hr>

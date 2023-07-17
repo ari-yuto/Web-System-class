@@ -15,8 +15,8 @@ String user_name = (String) session.getAttribute("name");
 </head>
 <body>
 	<h1>Book一覧</h1>
-	<p>本のタイトル/著者名/出版日</p>
 	<p><%=user_name%>:ログイン中
+	<p>本のタイトル/著者名/出版日</p>
 	</p>
 	<p>
 		<a href="FavoriteListServlet">あなたのお気に入りはこちら</a>
